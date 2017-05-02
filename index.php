@@ -1,3 +1,52 @@
+<?php
+require_once 'vendor/autoload.php';
+
+$post = [];
+$errors = [];
+
+if(!empty($_POST)){
+    $post = array_map('trim', array_map('strip_tags', $_POST));
+
+    if(strlen($post['name']) < 3 && strlen($post['name']) > 20){
+        $errors[] = 'Votre nom doit être compris entre 3 et 20 caratères y compris';
+    }
+
+    if(!filter_var($post['email'], FILTER_VALIDATE_EMAIL)){ 
+        $errors[] = 'Votre email est invalide'; 
+    }
+
+    if(strlen($post['message']) < 8){
+        $errors[] = 'Votre message doit être supérieur à 8 caratères';
+    }
+
+    if(count($errors) === 0){
+
+        $sendMail = new PHPMailer;
+
+        $sendMail->isSMTP();                                      
+        $sendMail->Host = 'smtp.gmail.com';                                   // Hôte du SMTP
+        $sendMail->SMTPAuth = true;                                             // SMTP Authentification
+        $sendMail->Username = 'cecilelafont@emaginetapub.com'; //Username                        // SMTP username
+        $sendMail->Password = 'mdp'; //mot de passe                                     // SMTP password
+        $sendMail->SMTPSecure = 'tls';                                          // Enable TLS encryption, `ssl` also accepted
+        $sendMail->Port = 587;                                                  // TCP port to connect to
+        $sendMail->CharSet = 'UTF-8';
+
+        $sendMail->setFrom($post['email'], $post['name']);              //Expéditeur
+
+        $sendMail->addAddress('contact@emaginetapub.com', 'Cécile');        //$user['email']
+        //$sendMail->addCC('');                     //Copie envoyer à l'adresse souhaitée du mail
+
+        $sendMail->Subject = 'Nouvelle demande depuis Emaginetapub.com';
+        $sendMail->Body    = $post['message']; //On envoi le message éventuellement en HTML
+        $sendMail->AltBody = $post['message']; //On envoi le message sans HTML
+
+        if(!$sendMail->send()){
+            $errors[] = 'échec lors de l\'envoie du mail ... Veuillez réessayer.';
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -273,7 +322,7 @@
                         
 <!--                        Formulaire de contact-->
                         
-                    <form class="form-horizontal" role="form" method="post" action="inc/traitement.php">
+                    <form class="form-horizontal" role="form" method="post">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Nom complet</label>
                             <div class="col-sm-10">
