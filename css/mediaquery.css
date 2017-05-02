@@ -1,0 +1,70 @@
+/* SUPERIEUR A 1200 PX*/
+@media screen and (min-width: 1200px) {
+/*
+    #galerie{
+        display: none;
+    }
+*/
+}
+/* ENTRE 992 ET 1200 PX*/
+@media screen and (min-width: 992px) {
+/*
+    #galerie{
+        display: none;
+    }
+*/
+}
+/* ENTRE 768 ET 992 PX*/
+@media screen and (min-width: 768px) {
+    .sligne, .mark, mark {
+        color: white;
+        background-color: #2e2e2e;
+    }
+    .contain-galerie{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    }
+      .color {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+
+/*
+    #galerie{
+        display: none;
+    }
+*/
+
+}
+/* INFERIEUR A 768 PX*/
+@media screen and (max-width: 768px) {
+    .sligne, .mark, mark {
+        color: white;
+        background-color: #2e2e2e;
+    }
+    .colrs {
+        margin-top: 15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+/*
+    #galerie{
+        display: none;
+    }
+*/
+    .boxcv{
+        margin: 4px 10px;
+        border-left: 1px solid #F07D05;
+        text-align: left;
+    }
+}
+

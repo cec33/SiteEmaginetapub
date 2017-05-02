@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+
+
+/*************** contenu global *****************/
+
+/*
+font-family: raleway dots, cursive;
+*/
+html {
+    color: #2e2e2e;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #2e2e2e;
+}
+.container {
+    text-align: center;
+}
+.row {
+    text-align: center;
+    align-content: center;
+}
+h1 {
+    font: 600 2em 'Raleway';
+    font-style: normal;
+    color: #343434;
+    text-align: center;
+    line-height: 25px;
+}
+h2 {
+    font: 600 1.2em 'Raleway';
+    color: #4e4e4e;
+}
+h3 {
+    font: 600 1em 'Raleway';
+    font-style: normal;
+    color: #F07D05;
+}
+p {
+    text-align: left;
+}
+.rs {
+    text-align: center;
+}
+strong {
+    color: #ffa03d;
+}
+/*
+modif bouton appel action
+*/
+.btn-default:hover {
+    color: #fff;
+    background-color: #F07D05;
+    border-color: #adadad;
+}
+.btn-default {
+    color: #fff;
+    background-color: #F07D05;
+    border-color: #d7d7d7;
+}
+.btn-rs{
+    margin: 1px;
+}
+
+/******* bouton facebook *******/
+
+.btn-facebook {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    text-align: center;
+}
+.btn-facebook:hover {
+    color: #fff;
+    background-color: #3b5998;
+}
+.btn-facebook:active {
+    color: #fff;
+    background-color: #5676b8;
+}
+.btn-facebook:focus {
+    color: #fff;
+    background-color: #5676b8;
+}
+
+/******* bouton twitter *******/
+
+.btn-twitter {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    text-align: center;
+}
+.btn-twitter:hover {
+    color: #fff;
+    background-color: #00C0F7;
+}
+.btn-twitter:active {
+    color: #fff;
+    background-color: #7de2ff;
+}
+.btn-twitter:focus {
+    color: #fff;
+    background-color: #00C0F7;
+}
+
+/******* bouton linkedin *******/
+
+.btn-linkedin {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    text-align: center;
+}
+.btn-linkedin:hover {
+    color: #fff;
+    background-color: #0e76a8;
+}
+.btn-linkedin:active {
+    color: #fff;
+    background-color: #0e76a8;
+}
+.btn-linkedin:focus {
+    color: #fff;
+    background-color: #35a6dd;
+}
+
+/******* bouton viadeo *******/
+
+.btn-viadeo {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    text-align: center;
+}
+.btn-viadeo:hover {
+    color: #f4982b;
+    background-color: #000;
+}
+.btn-viadeo:active {
+    color: #f4982b;
+    background-color: #000;
+}
+.btn-viadeo:focus {
+    color: #f4982b;
+    background-color: #4a4a4a;
+}
+
+/******* bouton google *******/
+
+.btn-google {
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+.btn-google:hover {
+    color: #fff;
+    background-color: #db4437;
+}
+.btn-google:active {
+    color: #fff;
+    background-color: #db4437;
+}
+.btn-google:focus {
+    color: #fff;
+    background-color: #f46c60;
+}
+
+/*************** barre de navigation *****************/
+
+.navbar-default {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 0.2em #F07D05 dotted;
+}
+@media(min-width:768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    /******** topbar *********/
+
+    .mylogo {
+        padding: 0.2em 0.5em;
+        background-color: #F07D05;
+        font: 100 2.5em 'Raleway';
+        color: white;
+    }
+    .slogan {
+        padding: 0.2em 0.5em;
+        vertical-align: middle;
+        font: 200i 1em 'Raleway';
+        height: 40px;
+        line-height: 20px;
+    }
+
+    /************* section page1 présentation *************/
+
+    .intro-section {
+        height: 100%;
+        text-align: left;
+        background-color: #f6f6f6;
+    }
+    .prestations {
+        background-color: white;
+        padding: 1em;
+    }
+    #collogo {
+        text-align: center;
+        padding: 2em 1em;
+    }
+    #logoimg
+    {
+        width: 200px;
+        transition: width 1s linear;
+    }
+    #logoimg:hover
+    {
+        width: 225px;
+    }
+    .sligne, .mark, mark {
+        color: white;
+        background-color: #2e2e2e;
+    }
+    .colrs {
+        text-align: right;
+        text-decoration: none;
+        text-decoration-color: aqua;
+    }
+
+
+    /*************** section page2 galerie *****************/
+
+    .galerie-section {
+        margin-bottom: 10px;
+        padding-top: 150px;
+        text-align: center;
+        background-color: #fff;
+    }
+    /*
+    .boximg {
+    position: relative;
+    padding: 10px 0;
+    margin: 5px 5px;
+    width: 200px;
+    height: 200px;
+}
+    */
+    /*
+    .cadreimg-galerie:hover{
+    width: inherit;
+    transition: all 1s ease;
+    z-index: 100;
+}
+    */
+    .contain-galerie{
+        display: flex;
+        flex-direction: row;
+        height: 60vh;
+    }
+    .img-galerie{
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 10em;  
+/*        box-shadow: 0 0 20px #424242;*/
+        overflow: hidden;
+        height: 60vh;
+        color: white;
+        transition: flex-basis 500ms ease-in-out;
+
+    }
+    .img-galerie:hover{
+        flex-basis: 90%;
+    }
+    .color:hover .details {
+        opacity: 1;
+    }
+    .details {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+    }
+
+    .details li {
+        font-size: 1em;
+        line-height: 2em;
+    }
+
+    /*
+    .img-galerie{
+    width: 100%;
+    overflow: hidden;
+}    
+    .img-galerie:hover{
+    width: 100%;
+    transition: width 2s;
+    transform-origin: 0 0;
+    z-index: 100;
+    display: block;
+}
+    */
+    /*
+    .vign-galerie{
+    z-index: 10000;
+}
+    #imggalerie {
+    width: 150px;
+    height: 200px;
+}
+    */
+    /* pour cropper une image appliquer une div avec class="imgcrop"
+    .imgcrop {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+    */
+    /*
+    .surImage {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(240, 125, 5, 0.8);
+    color: white;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+    */
+    /*
+    .surImage:hover{
+    width: 100%;
+}
+    */
+
+    /*************** section cv *****************/
+
+    .cv-section {
+        margin-bottom: 10px;
+        padding-top: 150px;
+        text-align: center;
+        background: #fff;
+    }
+    .boxcv {
+        text-align: left;
+        border-left: 1px solid #F07D05;
+        margin-top: 10px;
+    }
+
+
+    /*************** section contact *****************/
+
+    .contact-section{
+        margin-bottom: 10px;
+        padding-top: 150px;
+        text-align: center;
+        background-color: #f6f6f6;
+        padding-right: 100px;
+    }
+    .form-group {
+        padding-top: 50px;
+        text-align: center;
+        padding-right: 50px;
+    }
